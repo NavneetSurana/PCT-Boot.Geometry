@@ -55,6 +55,12 @@ int ccw(point &a, point &b, point &c) {
     return 0;
   }
 }
+/** Reference:-
+ *  This algorithm is implemented using Monotone chain for
+ *  convex hull. I have made some minor tweaks in this algorithm
+ *  which resulted in triangulation
+ *  Link for Monotone Chain: https://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain
+ */
 /**
  * @brief      triangulation of a set of points
  *
@@ -65,8 +71,6 @@ int ccw(point &a, point &b, point &c) {
 set<pair<int, int>> triangulate(vector<point> &P) {
   // n is the number of points
   int n = P.size();
-  // n must be greater than 2 for triangulation
-  assert(n > 2);
   // sorting the given points in ascending order
   sort(P.begin(), P.end());
   // uHull is the upper HUll
@@ -105,7 +109,7 @@ set<pair<int, int>> triangulate(vector<point> &P) {
 }
 
 int main() {
-  cout << "Enter number of points(must be greater than 2): ";
+  cout << "Enter number of points: ";
   int n;
   cin >> n;
   cout << "Enter your " << n << " points in " << n
