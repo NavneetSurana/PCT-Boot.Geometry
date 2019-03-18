@@ -108,8 +108,8 @@ int main() {
   cout << "Enter number of points(must be greater than 2): ";
   int n;
   cin >> n;
-  cout << "Enter your " << n << " points in" << n
-       << "new lines.\nEach line will be of the form x y viz abscissa "
+  cout << "Enter your " << n << " points in " << n
+       << " new lines.\nEach line will be of the form x y viz abscissa "
           "ordinate.\n";
   vector<point> a(n);
   for (int i = 0; i < n; i++) {

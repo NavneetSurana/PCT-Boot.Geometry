@@ -26,9 +26,13 @@ g++ -std=c++17 triangulation.cpp -o build
 ./build
 ```
 ## Test
-This program has been tested with the following set of points.
+[triangulation.cpp](src/triangulation.cpp) has been tested with the following set of points.
+
 **{(0,0), (0,2), (2,0), (1,1), (1,2), (1,3), (2,2)}**
+
 It gave the following triangulation.
+
+
 ![plot.png](other/plot.png)
 
 ## Author
